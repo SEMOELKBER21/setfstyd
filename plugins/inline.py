@@ -26,11 +26,11 @@ from youtubesearchpython import VideosSearch
 
 buttons = [
             [
-                InlineKeyboardButton("CHANNEL", url="https://t.me/AsmSafone"),
-                InlineKeyboardButton("SUPPORT", url="https://t.me/AsmSupport"),
+                InlineKeyboardButton("قناه البوت🙋‍♂️", url="https://t.me/SE_MO_1"),
+                InlineKeyboardButton("جروب الدعم🥵", url="https://t.me/SEMO658"),
             ],
             [
-                InlineKeyboardButton("🤖 MAKE YOUR OWN BOT 🤖", url="https://heroku.com/deploy?template=https://github.com/AsmSafone/VideoPlayerBot"),
+                InlineKeyboardButton("كـلم سسيمو المبرمج وهيعملك بوت خاص بك❤️", url="https://t.me/S_E_M_O_E_L_K_B_E_R"),
             ]
          ]
 
@@ -40,8 +40,8 @@ async def search(client, query):
     if query.query == "SAF_ONE":
         answers.append(
             InlineQueryResultArticle(
-                title="Deploy Own Video Player Bot",
-                input_message_content=InputTextMessageContent(f"{REPLY_MESSAGE}\n\n<b>© Powered By : \n@AsmSafone | @AsmSupport 👑</b>", disable_web_page_preview=True),
+                title="لــو عااوز بوت كلم سيمو يحبي❤️",
+                input_message_content=InputTextMessageContent(f"{REPLY_MESSAGE}\n\n<b>المبرمج❤️ : \n@S_E_M_O_E_L_K_B_E_R | @SEMO658 𖤐</b>", disable_web_page_preview=True),
                 reply_markup=InlineKeyboardMarkup(buttons)
                 )
             )
@@ -52,7 +52,7 @@ async def search(client, query):
         await client.answer_inline_query(
             query.id,
             results=answers,
-            switch_pm_text=("✍️ Type An Video Name!"),
+            switch_pm_text=("✍️ اكــتــب اسـم الفـيـديو!"),
             switch_pm_parameter="help",
             cache_time=0
         )
@@ -83,7 +83,7 @@ async def search(client, query):
             await query.answer(
                 results=answers,
                 cache_time=0,
-                switch_pm_text=("❌ No Results Found!"),
+                switch_pm_text=("❌ لم يتم العثور على نتائج!"),
                 switch_pm_parameter="",
             )
 
